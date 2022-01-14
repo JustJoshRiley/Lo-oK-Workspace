@@ -3,7 +3,7 @@
 Its time to change the way you [SEARCH](http://look-workspace.dev.justjoshriley.com/#/).
 
 
-![Look Homepage Screen Shot](Lo-oK_Home.png)
+![Look Homepage Screen Shot](Lo-oK_Homepage.png)
 
 
 [Lo-oK](http://look-workspace.dev.justjoshriley.com/#/) is a search engine that is designed to help boost productivity acrossed teams by allowing users to create workspaces to organize links to websites that match their relevant category. 
