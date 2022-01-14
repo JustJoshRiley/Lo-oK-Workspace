@@ -51,8 +51,7 @@ mongo = PyMongo(app)
 
 @app.route('/', methods=["GET"])
 def hompage():
-    # return send_from_directory(app.static_folder, 'index.html')
-    return ("Hello")
+    return send_from_directory(app.static_folder, '/index.html')
 
 # Signup User Route
 @app.route('/signup_user', methods=['POST'])
