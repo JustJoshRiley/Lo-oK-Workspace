@@ -1,18 +1,15 @@
-# Getting Started with Create React App
+# ( Lo-oK )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Its time to change the way you [SEARCH](http://look-workspace.dev.justjoshriley.com/#/).
 
-## Available Scripts
 
-In the project directory, you can run:
+![Look Homepage Screen Shot](Lo-oK_Home.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Lo-oK](http://look-workspace.dev.justjoshriley.com/#/) is a search engine that is designed to help boost productivity acrossed teams by allowing users to create workspaces to organize links to websites that match their relevant category. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Lo-oK](http://look-workspace.dev.justjoshriley.com/#/) features a chat feature to allow users connected to the same workspace to communicate with other users.
+
 
 ### `npm test`
 
