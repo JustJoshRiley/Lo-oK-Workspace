@@ -49,9 +49,10 @@ mongo = PyMongo(app)
 # one route roughly maps to one-ish user-facing operations
 # and may include multiple db operations (already implemented)
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET"])
 def hompage():
-    return send_from_directory(app.static_folder, 'index.html')
+    # return send_from_directory(app.static_folder, 'index.html')
+    return ("Hello")
 
 # Signup User Route
 @app.route('/signup_user', methods=['POST'])
