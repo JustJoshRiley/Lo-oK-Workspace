@@ -1,0 +1,31 @@
+#WorkspaceCardContainer{
+    flex-direction: column;
+    height: fit-content;
+    width: 95%;
+    background-color: rgb(20, 20, 20);
+    padding: 2.5%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    border-radius: 10px;
+}
+
+#WorkspaceContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#WorkspaceName {
+    font-size: 2vw;
+    text-align: center;
+}
+
+#WorkspaceHashtag {
+    color: pink;
+    font-size: 1vw;
+    font-weight: 800;
+    text-align: center;
+}

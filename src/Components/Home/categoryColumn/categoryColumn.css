@@ -1,0 +1,39 @@
+#Category {
+    height: 35vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#CategoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+    flex-direction: row;
+}
+
+#CategoryHeaderContent {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid pink;
+}
+
+#CategoryHeader #add {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#CategoryContainer {
+    height: 100%;
+    overflow: scroll;
+}

@@ -1,0 +1,43 @@
+#Parent-Container {
+    background-color: rgb(10, 10, 10);
+    overflow: hidden;
+    height: 100vh;
+}
+
+#WelcomeContainer {
+    background-color: black;
+    margin: 0;
+    padding: 2.5%;
+    text-align: center;
+    font-weight: 900;
+    color: pink;
+    height: 10%;
+}
+
+#Home-Container {
+    padding-bottom: 2.5%;
+    width: 100vw;
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+#WorkspaceColumn {
+    height: 25%;
+}
+
+
+#ContentContainer {
+    display: grid;
+    grid-template-columns: 20vw 45vw 20vw;
+    grid-gap: 5vw;
+    height: 50vh;
+    padding-top: 3.5%;
+}
+
+
+
+
+#HOMEColumn3 {
+    /* height: 100%; */
+
+}

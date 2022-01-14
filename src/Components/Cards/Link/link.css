@@ -1,0 +1,37 @@
+#LinkContainerCard {
+    flex-direction: column;
+    height: fit-content;
+    width: 95%;
+    background-color: rgb(20, 20, 20);
+    padding: 2.5%;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    border-radius: 10px;
+    margin: 2.5%;
+}
+
+#LinkContainerCard a {
+    text-decoration: none;
+    color: none;
+}
+
+#LinkContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#LinkName {
+    font-size: 2vw;
+    text-align: left;
+    color: white;
+}
+
+#LinkDescription {
+    color: pink;
+    font-size: 1vw;
+    font-weight: 800;
+    text-align: left;
+}

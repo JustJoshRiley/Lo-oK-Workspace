@@ -1,0 +1,80 @@
+.modal {
+    background-color: black;
+    color: pink;
+    font-weight: 900s;
+
+}
+
+.modal-header {
+    background-color: black;
+    color: pink;
+    border: 1px solid pink;
+}
+
+.modal-body {
+    background-color: black;
+    border: 1px solid pink;
+    color: pink;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form .label {
+    margin: 2.5%;
+}
+
+.form .input {
+    background-color: rgb(39, 39, 39);
+    width: 50%;
+}
+
+.form .button {
+    width: 50%;
+    margin: 2.5%;
+    background-color: transparent;
+    border: 1px solid pink;
+    color: pink;
+    transition: .5s linear;
+}
+
+.form .button:hover{
+    background-color: rgb(39, 39, 39);
+    border: none;
+    font-weight: 900;
+}
+
+.modal-footer {
+    background-color: black;
+    border: 1px solid pink;
+}
+
+.modal-footer .button {
+    background-color: transparent;
+    color: pink;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    font-weight: 900;
+    transition: .5s linear;
+}

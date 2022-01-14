@@ -1,0 +1,16 @@
+.HeroContainer {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    color: rgb(39, 39, 39);
+}
+
+
+.Header {
+    font-size: 6em;
+    margin-bottom: 0;
+}
