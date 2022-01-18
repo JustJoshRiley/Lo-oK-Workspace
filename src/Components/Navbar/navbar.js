@@ -1,6 +1,6 @@
 import React from "react";
 import './navbar.css';
-import { MdAccountCircle } from 'react-icons/md';
+import { MdOutlineAccountCircle } from 'react-icons/md';
 
 import { NavLink } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ function NavBar() {
             <div id="NAVColumn3" className="Home">
                 {/* <NavLink className="Link" to="/Home"> */}
                 <button onClick={() => setSignUpOrLogInModalShow(true)}>
-                    <MdAccountCircle  className="button" />
+                    <MdOutlineAccountCircle  className="button" />
                 </button>
                 {/* </NavLink> */}
             </div>

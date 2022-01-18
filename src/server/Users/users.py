@@ -59,10 +59,10 @@ def find_one_user(email, mongo):
 
 def login_user(email, password, mongo):
     existing_user = find_one_user(email, mongo)
-    if existing_user["password"] == password:
-        return existing_user
-    else :
+    if existing_user == None :
         return False
+    elif existing_user["password"] == password:
+        return existing_user
 
 
 def delete_user(user_id, mongo, ObjectId):

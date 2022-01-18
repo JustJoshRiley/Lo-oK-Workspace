@@ -1,3 +1,4 @@
+from asyncio import FastChildWatcher
 from flask import Flask, send_from_directory, request
 
 from flask_pymongo import PyMongo
@@ -77,14 +78,21 @@ def login_user_route():
     existing_user_data_dict = request.get_json()
     existing_user = login_user(existing_user_data_dict["email"], existing_user_data_dict["password"], mongo)
     print(existing_user)
-    return_dict = {
-        "username" : existing_user["username"], 
-        "email" : existing_user["email"], 
-        "_id" : str(existing_user["_id"])
-        }
-    return_dict_json = json.dumps(return_dict)
-    # print(return_dict_json)
-    return return_dict_json
+    if existing_user == False :
+        return_dict = {'response' : False}
+        return_dict_json = json.dumps(return_dict)
+        # print(return_dict_json)
+        return return_dict_json
+    else :
+        return_dict = {
+            "response" : True,
+            "username" : existing_user["username"], 
+            "email" : existing_user["email"], 
+            "_id" : str(existing_user["_id"])
+            }
+        return_dict_json = json.dumps(return_dict)
+        # print(return_dict_json)
+        return return_dict_json
 
 # Add New Workspace Route
 @app.route('/add_new_workspace', methods=['POST'])

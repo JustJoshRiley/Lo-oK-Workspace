@@ -19,8 +19,10 @@ function Home() {
     console.log(activeCategoryId)
 
     return (
+        <>
+        <NavBar />
+        
         <div id="Parent-Container">
-            <NavBar />
             <div id="WelcomeContainer">
                 <h1>Welcome {cookies.get("username")} 🥳</h1>
             </div>
@@ -43,6 +45,7 @@ function Home() {
 
             </div>
         </div>
+        </>
     )
 }
 

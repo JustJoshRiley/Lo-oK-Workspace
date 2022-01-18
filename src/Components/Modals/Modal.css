@@ -66,7 +66,22 @@
 .modal-footer {
     background-color: black;
     border: 1px solid pink;
+    width: 100%;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-content a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .modal-footer .button {
     background-color: transparent;

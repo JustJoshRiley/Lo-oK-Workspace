@@ -52,14 +52,18 @@ function LoginUserModal(props) {
                             .then((response) => {
                                 response.json()
                                 .then(data => {
-                                    console.log(data)
-                                    const cookies = new Cookies();
-                                    cookies.set('username', data["username"], {path : '/'})
-                                    cookies.set('email', data["email"], {path : '/'})
-                                    cookies.set('user_id', data["_id"], {path : '/'})
-                                    setRedirectUser(true)
-                                    console.log(data)
-                                    props.onHide()
+                                    if (data["response"] === false) {
+                                        alert("User email does not exist")
+                                    } else {
+                                        console.log(data)
+                                        const cookies = new Cookies();
+                                        cookies.set('username', data["username"], {path : '/'})
+                                        cookies.set('email', data["email"], {path : '/'})
+                                        cookies.set('user_id', data["_id"], {path : '/'})
+                                        setRedirectUser(true)
+                                        console.log(data)
+                                        props.onHide()
+                                    }
                                 })
                             })
                             .catch((error) => {
@@ -69,7 +73,10 @@ function LoginUserModal(props) {
                     </form>
                 </Modal.Body>
                 <Modal.Footer dialogClassName="modal-footer">
-                    <p>Don't Have An Account? <button className='button' onClick={props.hideLoginAndShowSignup} >Sign Up</button> </p>
+                    <div className='footer-content'>
+                        <p>Don't Have An Account? <a className='button' onClick={props.hideLoginAndShowSignup} >Sign Up</a>  </p>
+                        
+                    </div>
                 </Modal.Footer>
             </Modal>
         </>

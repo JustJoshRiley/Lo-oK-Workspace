@@ -7,11 +7,14 @@
 #WelcomeContainer {
     background-color: black;
     margin: 0;
-    padding: 2.5%;
+    padding-top: 5%;
     text-align: center;
     font-weight: 900;
     color: pink;
-    height: 10%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #Home-Container {

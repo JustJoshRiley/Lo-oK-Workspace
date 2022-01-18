@@ -81,7 +81,9 @@ function SignUpModal(props) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer dialogClassName="modal-footer">
-                    <p>Have An Account? <button className='button' onClick={props.hideSignupShowLogin}>Sign In</button> </p>
+                    <div className='footer-content'>
+                        <p>Have An Account? <a className='button' onClick={props.hideSignupShowLogin}>Sign In</a> </p>
+                    </div>
                 </Modal.Footer>
             </Modal>
         </>

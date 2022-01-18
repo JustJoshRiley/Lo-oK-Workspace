@@ -1,16 +1,43 @@
 .HeroContainer {
-    height: 85vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100vw;
-    color: rgb(39, 39, 39);
+    color: rgb(59, 59, 59);
 }
-
 
 .Header {
     font-size: 6em;
     margin-bottom: 0;
+}
+
+.header-o {
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+    animation: blinker 10s linear infinite;
+}
+
+.header-o:hover {
+    color: rgb(190, 190, 190);
+    cursor: pointer;
+}
+
+.header-o::after {
+    color: rgb(190, 190, 190);
+}
+
+@keyframes blinker {
+    50% {
+    opacity: 0;
+    }
+}
+
+.firefly-react{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
