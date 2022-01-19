@@ -21,8 +21,9 @@
 }
 
 .header-o:hover {
-    color: rgb(190, 190, 190);
+    color: pink;
     cursor: pointer;
+    transition: .5s linear;
 }
 
 .header-o::after {
