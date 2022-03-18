@@ -42,8 +42,8 @@ from src.server.CollectionConnections.chat_to_workspace import *
 app = Flask(__name__, static_url_path='', static_folder='build')
 CORS(app)
 
-# app.config["MONGO_URI"] = "mongodb://root:thisisSparta!@srv-captain--look-database/mydatabase?authSource=admin"
-app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
+app.config["MONGO_URI"] = "mongodb://root:thisisSparta!@srv-captain--look-database/mydatabase?authSource=admin"
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 
 
