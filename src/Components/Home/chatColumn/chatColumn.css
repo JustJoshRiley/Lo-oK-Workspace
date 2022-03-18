@@ -77,7 +77,7 @@
 
 @media only screen and (max-width: 600px) {
     #Chat-Content {
-    height: 80vh;
+        height: 75vh;
     }
     #chat-form-input {
         width: 100%;

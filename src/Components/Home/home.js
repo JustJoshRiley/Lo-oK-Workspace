@@ -39,7 +39,7 @@ function Home() {
                     <CategoryColumn setActiveCategoryId={setActiveCategoryId} activeWorkspaceId={activeWorkspaceId}/>
 
                     <LinkColumn activeCategoryId={activeCategoryId} />
-                    
+
                     <div id="Mobile-Chat-Container">
                         <NavLink  
                         to="/ChatMobile"
@@ -49,9 +49,8 @@ function Home() {
                         </NavLink>
                         
                     </div>
-                    
-                    <ChatColumn id="Chat-Id-Column" activeWorkspaceId={activeWorkspaceId} />
 
+                    <ChatColumn id="Chat-Id-Column" activeWorkspaceId={activeWorkspaceId} />
                 </div>
             </div>
         </div>
