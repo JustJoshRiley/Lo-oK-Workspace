@@ -1,38 +1,57 @@
 #Link {
-    height: 35vh;
+    min-height: 95%;
+    max-height: 95%;
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: scroll;
 }
-
-#LinkHeader {
+#Link-Header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: 5%;
+    position: fixed;
+    z-index: 99;
+    background-color: white;
 }
 
-#LinkHeaderContent {
-    width: 100%;
-    height: fit-content;
+#Link-Header-Content {
+    max-width: 50%;
+    min-width: 25%;
+    height: 5vh;
+    padding-left: 2.5%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
     border-bottom: 1px solid pink;
 }
 
-#LinkHeader #add {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
+#Link-Container {
+    height: 100%;
+    width: 100%;
+    margin-top: 6vh;
 }
 
-#LinkContainer {
-    height: 100%;
-    overflow: scroll;
+@media only screen and (max-width: 600px) {
+    #Link {
+        width: 100%;
+        min-height: 60%;
+        max-height: 60%;
+        border-bottom: 1px solid pink;
+    }
+    #Link-Header {
+        margin-bottom: 0;
+    }
+    #Link-Header-Content {
+        min-width: 10%;
+        border: none;
+    }
+    #Link-Container {
+        width: 100%;
+        min-height: 50px;
+    }
 }

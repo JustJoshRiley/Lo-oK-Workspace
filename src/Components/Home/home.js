@@ -6,6 +6,7 @@ import CategoryColumn from "./categoryColumn/categoryColumn";
 import Cookies from "universal-cookie";
 import LinkColumn from "./linkColumn/linkColumn";
 import ChatColumn from "./chatColumn/chatColumn";
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -23,26 +24,35 @@ function Home() {
         <NavBar />
         
         <div id="Parent-Container">
-            <div id="WelcomeContainer">
-                <h1>Welcome {cookies.get("username")} 🥳</h1>
+            <div id="Welcome-Container">
+                <h1>Welcome <a id="Welcome-Container-Username">{cookies.get("username")}</a> 🥳</h1>
             </div>
             
             <div id="Home-Container">
-                <div id="WorkspaceColumn">
+                <div id="Workspace-Column">
                     <WorkspaceColumn setActiveCategoryId={setActiveCategoryId} setActiveWorkspaceId={setActiveWorkspaceId}/>
                 </div>
                 
-                <div id="ContentContainer">
+                <div id="Content-Container">
 
                     {/* pass that active workspace id variable as a prop to Category Column */}
                     <CategoryColumn setActiveCategoryId={setActiveCategoryId} activeWorkspaceId={activeWorkspaceId}/>
 
                     <LinkColumn activeCategoryId={activeCategoryId} />
                     
-                    <ChatColumn activeWorkspaceId={activeWorkspaceId} />
+                    <div id="Mobile-Chat-Container">
+                        <NavLink  
+                        to="/ChatMobile"
+                        state={activeWorkspaceId}
+                        >
+                            <button id="Mobile-Chat-Button">CHAT</button>
+                        </NavLink>
+                        
+                    </div>
+                    
+                    <ChatColumn id="Chat-Id-Column" activeWorkspaceId={activeWorkspaceId} />
 
                 </div>
-
             </div>
         </div>
         </>

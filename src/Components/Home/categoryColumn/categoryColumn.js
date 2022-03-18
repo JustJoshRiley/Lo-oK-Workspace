@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { BiAddToQueue } from "react-icons/bi";
+import { BiBookAdd } from "react-icons/bi";
 import CategoryCard from "../../Cards/CategoryCard/categoryCard";
 import AddCategoryModal from "../../Modals/AddCategoryModal/addCategoryModal";
 import './categoryColumn.css';
@@ -48,10 +48,10 @@ function CategoryColumn(props) {
     return (
         <div id="Category">
             <AddCategoryModal getAllCategoriesForWorkspace={() => getAllCategoriesForWorkspace()} activeWorkspaceId={props.activeWorkspaceId}  show={categoryModalShow} onHide={() => setCategoryModalShow(false)} />
-            <div id="CategoryHeader">
-                <div id="CategoryHeaderContent">
-                    <p>CATEGORIES</p>
-                    <BiAddToQueue id="add" onClick={() => {
+            <div id="Category-Header">
+                <div id="Category-Header-Content">
+                    Categories
+                    <BiBookAdd id="add" onClick={() => {
                         if (!props.activeWorkspaceId) {
                             alert("Please Select a Workspace before Adding a Category")
                             return <></>
@@ -59,7 +59,7 @@ function CategoryColumn(props) {
                         setCategoryModalShow(true)}}/>
                 </div>
             </div>
-            <div id="CategoryContainer">
+            <div id="Category-Container">
                 {allCategoriesForWorkspace}
             </div>
         </div>

@@ -1,0 +1,9 @@
+#ChatBackButton {
+    background-color: transparent;
+    border: none;
+}
+
+#ChatColumnContainer {
+    height: 100vh;
+    width: 100vw;
+}

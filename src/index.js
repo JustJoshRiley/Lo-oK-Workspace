@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Home from './Components/Home/home';
+import ChatMobile from './Components/ChatMobile/ChatMobile';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +15,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />}/>
       <Route path="/Home" element={<Home />}/>
+      <Route path="/ChatMobile" element={<ChatMobile />}/>
     </Routes>
   </Router>,
   document.getElementById('root')

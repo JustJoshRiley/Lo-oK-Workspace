@@ -9,7 +9,7 @@ function LinkCard(props) {
             <a target="_blank" href={url}>
                 <div id="LinkContent">
                     <img src={image_url}/>
-                    <h1 id="LinkName" >{title}</h1>
+                    <h3 id="LinkName" >{title}</h3>
                     <p id="LinkDescription">{description}</p>
                 </div>
             </a>

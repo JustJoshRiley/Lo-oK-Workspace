@@ -1,0 +1,19 @@
+#ChatContainerCard {
+    width: 95%;
+    height: fit-content;
+    padding: .5%;
+    background-color: rgba(143, 143, 143, 0.349);
+    margin: 2.5%;
+}
+#username {
+    display: flex;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    color: black;
+    width: 100%;
+}
+#message {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

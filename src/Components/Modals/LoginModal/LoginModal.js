@@ -5,6 +5,8 @@ import Cookies from 'universal-cookie';
 
 import '../../Modals/Modal.css';
 
+import { sha512 } from 'js-sha512';
+
 function LoginUserModal(props) {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -23,7 +25,7 @@ function LoginUserModal(props) {
             centered
             dialogClassName="modal"
             >
-                <Modal.Header className='modal-header' closeButton closeVariant='white'>
+                <Modal.Header className='modal-header' closeButton closeVariant='black'>
                     <Modal.Title>
                         Sign In
                     </Modal.Title>
@@ -39,8 +41,10 @@ function LoginUserModal(props) {
                         <button className='button' 
                         onClick={async (event) => {
                             event.preventDefault();
-                            const returning_user = { "email" : email, "password" : password};
-                            console.log(returning_user)
+                            var hash = sha512.create();
+                            hash.update(password);
+                            const returning_user = { "email" : email, "password" : hash.hex()};
+                            console.log(returning_user);
                             const front_end_response = await fetch("/login_user", {
                                 method : "POST",
                                 headers : {

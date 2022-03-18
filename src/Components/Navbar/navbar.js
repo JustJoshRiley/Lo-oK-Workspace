@@ -15,22 +15,15 @@ function NavBar() {
 
             <div id="NAVColumn1" className="Navbar-Brand">
             <NavLink className="Link" to="/">
-                <h1>( Lo-oK )</h1>
+                <h1 >( Lo-oK )</h1>
             </NavLink>
-            </div>
-
-            <div id="NAVColumn2">
-                <form className="Form-Container-Nav">
-                    <input placeholder="Search" type="text"/>
-                    <button type="submit">Search</button>
-                </form>
             </div>
 
             <div id="NAVColumn3" className="Home">
                 {/* <NavLink className="Link" to="/Home"> */}
-                <button onClick={() => setSignUpOrLogInModalShow(true)}>
-                    <MdOutlineAccountCircle  className="button" />
-                </button>
+                    <button onClick={() => setSignUpOrLogInModalShow(true)}>
+                        <MdOutlineAccountCircle  className="button" />
+                    </button>
                 {/* </NavLink> */}
             </div>
 

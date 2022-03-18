@@ -56,6 +56,11 @@ def find_one_user(email, mongo):
     for user_obj in existing_user:
         return user_obj
 
+def find_user_by_user_id(user_id, mongo, ObjectId):
+    existing_user = mongo.db.users.find({"_id" : ObjectId(user_id) })
+    for user_obj in existing_user:
+        return user_obj
+
 
 def login_user(email, password, mongo):
     existing_user = find_one_user(email, mongo)

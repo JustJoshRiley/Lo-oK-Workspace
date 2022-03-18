@@ -2,7 +2,7 @@
     flex-direction: column;
     height: fit-content;
     width: 95%;
-    background-color: rgb(20, 20, 20);
+    background-color: rgba(143, 143, 143, 0.349);
     padding: 2.5%;
     display: grid;
     grid-template-columns: 5fr 1fr;
@@ -19,13 +19,19 @@
 }
 
 #CategoryName {
-    font-size: 2vw;
+    font-size: 2vh;
     text-align: center;
 }
 
 #CategoryHashtag {
-    color: pink;
-    font-size: 1vw;
+    color: #c9639b;
+    font-size: 1.5vh;
     font-weight: 800;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #CategoryContainerCard {
+        width: 25%;
+    }
 }

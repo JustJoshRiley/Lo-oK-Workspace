@@ -8,7 +8,7 @@ function CategoryCard(props) {
     return (
         <div id="CategoryContainerCard">
             <div id="CategoryContent" onClick={() => {props.setActiveCategoryId(categoryId)}}>
-                <h1 id="CategoryName">{name}</h1>
+                <h3 id="CategoryName">{name}</h3>
                 <h6 id="CategoryHashtag">#{hashtag}</h6>
             </div>
             <div id="CategoryEditButton">

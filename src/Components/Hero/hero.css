@@ -10,13 +10,17 @@
 }
 
 .Header {
-    font-size: 6em;
+    font-size: 8vw;
     margin-bottom: 0;
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    height: 150px;
 }
 
 .header-o {
     text-decoration: none;
-    color: rgb(190, 190, 190);
+    color: pink;
     animation: blinker 10s linear infinite;
 }
 
@@ -28,6 +32,10 @@
 
 .header-o::after {
     color: rgb(190, 190, 190);
+}
+.Subtext {
+    font-size: 2vw;
+    font-weight: 500;
 }
 
 @keyframes blinker {

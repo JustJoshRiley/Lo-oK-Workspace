@@ -42,8 +42,8 @@ from src.server.CollectionConnections.chat_to_workspace import *
 app = Flask(__name__, static_url_path='', static_folder='build')
 CORS(app)
 
-app.config["MONGO_URI"] = "mongodb://root:thisisSparta!@srv-captain--look-database/mydatabase?authSource=admin"
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
+# app.config["MONGO_URI"] = "mongodb://root:thisisSparta!@srv-captain--look-database/mydatabase?authSource=admin"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 
 
@@ -231,10 +231,10 @@ def add_new_message_route():
     new_chat_dict = request.get_json()
     print(new_chat_dict)
 
-    new_chat_response = add_new_chat_message(new_chat_dict["message"], mongo)
+    new_chat_response = add_new_chat_message(new_chat_dict['message'], new_chat_dict["user_id"], mongo)
 
     return_dict = {
-        "message" : new_chat_response["message"]
+        "message" : new_chat_response["message"],
     }
     return_dict_json = json.dumps(return_dict)
     connect_chat_to_workspace(str(new_chat_response["_id"]), new_chat_dict["workspace_id"], mongo)
@@ -250,8 +250,10 @@ def get_all_messages_for_workspace_route():
     all_messages_to_workspace = find_all_chats_for_one_workspace(workspace_id, mongo)
     for message in all_messages_to_workspace:
         message_object = find_message_based_on_id(message["chat_id"], mongo, ObjectId)
+        username = find_user_by_user_id(message_object["user_id"], mongo, ObjectId)
         message_dict = {
-            "message" : message_object["message"]
+            "message" : message_object["message"],
+            "username" : username["username"]
         }
         all_messages_for_workspace.append(message_dict)
     all_messages_dict = json.dumps(all_messages_for_workspace)

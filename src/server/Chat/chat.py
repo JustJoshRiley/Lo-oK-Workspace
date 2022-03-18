@@ -1,8 +1,9 @@
-def add_new_chat_message(text, mongo):
+def add_new_chat_message(message, user_id, mongo):
     # message 
     # evanwall: maybe add timestamp to order messages by
     new_message = {
-        "message" : text,
+        "message" : message,
+        "user_id" : user_id
         #"timestamp": time.time()
     }
     message = mongo.db.chat.insert_one(new_message)

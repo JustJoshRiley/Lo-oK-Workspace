@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { BiAddToQueue } from "react-icons/bi";
+import { BiBookAdd } from "react-icons/bi";
 import './workspaceColumn.css';
 import AddWorkspaceModal from "../../Modals/AddWorkspaceModal/addWorkspaceModal";
 import WorkspaceCard from "../../Cards/WorkspaceCard/workspaceCard";
@@ -60,13 +60,13 @@ function WorkspaceColumn(props) {
     return (
         <div id="Workspace">
             <AddWorkspaceModal getAllWorkspaces={() => getAllWorkspaces()} show={workspceModalShow} onHide={() => setWorkspaceModalShow(false)} />
-            <div id="WorkspaceHeader">
-                <div id="WorkspaceHeaderContent">
-                    <p>WORKSPACES</p>
-                    <BiAddToQueue id="add" className="add_workspace_button" onClick={() => setWorkspaceModalShow(true)} />
+            <div id="Workspace-Header">
+                <div id="Workspace-Header-Content">
+                    Workspaces
+                    <BiBookAdd id="add" className="add_workspace_button" onClick={() => setWorkspaceModalShow(true)} />
                 </div>
             </div>
-            <div id="WorkspaceContainer">
+            <div id="Workspace-Container">
                 {allWorkspaces}
             </div>
         </div>

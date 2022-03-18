@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { Navigate } from 'react-router-dom';
+import { sha512 } from 'js-sha512';
 import Cookies from 'universal-cookie';
 
 import '../../Modals/Modal.css';
+import { BsShieldSlash } from 'react-icons/bs';
 
 function SignUpModal(props) {
     const [username, setUsername] = useState();
@@ -26,7 +28,7 @@ function SignUpModal(props) {
             dialogClassName="modal"
 
             >
-                <Modal.Header dialogClassName="modal-header"  closeButton closeVariant='white'>
+                <Modal.Header dialogClassName="modal-header"  closeButton closeVariant='black'>
                     <Modal.Title>
                         Sign Up
                     </Modal.Title>
@@ -35,18 +37,21 @@ function SignUpModal(props) {
                     <div className='form-container'>
                         <form className='form'>
                             <label className='label' for="username">Username:</label>
-                            <input onChange={e => setUsername(e.target.value)} value={username} className='input' id="username" name="username" type="text" required aria_required="true"/>
+                            <input className="input" onChange={e => setUsername(e.target.value)} value={username} className='input' id="username" name="username" type="text" required aria_required="true"/>
                             
                             <label className='label' for="email">Email:</label>
-                            <input onChange={e => setEmail(e.target.value)} value={email} className='input' id="email" name="email" type="email" required aria_required="true"/>
+                            <input className="input" onChange={e => setEmail(e.target.value)} value={email} className='input' id="email" name="email" type="email" required aria_required="true"/>
                             
                             <label className='label' for="password">Password:</label>
-                            <input onChange={e => setPassword(e.target.value)} value={password} className='input' id="password" name="password" type="password" required aria_required="true"/>
+                            <input className="input" onChange={e => setPassword(e.target.value)} value={password} className='input' id="password" name="password" type="password" required aria_required="true"/>
                             
                             <button className='button'
                                 onClick={async (event) => {
                                     event.preventDefault();
-                                    const new_user = { "username" : username, "email" : email, "password" : password };
+                                    const hash = sha512.create();
+                                    hash.update(password);
+                                    const new_user = { "username" : username, "email" : email, "password" : hash.hex() };
+                                    console.log(new_user);
                                     const response = await fetch("/signup_user", {
                                         method : "POST",
                                         headers: {

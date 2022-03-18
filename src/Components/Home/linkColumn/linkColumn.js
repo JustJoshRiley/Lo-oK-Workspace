@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { BiAddToQueue } from "react-icons/bi";
+import { BiBookAdd } from "react-icons/bi";
 import './linkColumn.css';
 import AddLinkModal from '../../Modals/AddLinkModal/addLinkModal';
 import LinkCard from '../../Cards/Link/link';
@@ -45,14 +45,13 @@ function LinkColumn(props) {
         }
     }, [props]);
 
-
     return (
         <div id='Link'>
             <AddLinkModal getAllLinksForCategory={() => getAllLinksForCategory()} activeCategoryId={props.activeCategoryId} show={linkModalShow} onHide={() => setLinkModalShow(false)}/>
-            <div id='LinkHeader'>
-                <div id='LinkHeaderContent'>
-                    <p>LINKS</p>
-                    <BiAddToQueue id='add' 
+            <div id='Link-Header'>
+                <div id='Link-Header-Content'>
+                    Links
+                    <BiBookAdd id='add' 
                     onClick={() =>  {
                         if (!props.activeCategoryId) {
                             alert("Please Select a Category before Adding a Link")
@@ -61,7 +60,7 @@ function LinkColumn(props) {
                         setLinkModalShow(true)}} />
                 </div>
             </div>
-            <div id='LinkContainer'>
+            <div id='Link-Container'>
                 {allLink}
             </div>
         </div>

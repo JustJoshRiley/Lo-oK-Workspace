@@ -19,7 +19,7 @@ function WorkspaceCard(props) {
                         props.setActiveCategoryId(null)
                         props.setActiveWorkspaceId(workspaceId)
                         }} >
-                    <h1 id="WorkspaceName">{name}</h1>
+                    <h3 id="WorkspaceName">{name}</h3>
                     <h6 id="WorkspaceHashtag">#{hashtag}</h6>
                 </div>
                 <div id="WorkspaceEditButton">

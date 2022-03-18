@@ -1,18 +1,18 @@
 .modal {
-    background-color: black;
+    background-color: white;
     color: pink;
     font-weight: 900s;
-
+    padding: 2.5%;
 }
 
 .modal-header {
-    background-color: black;
-    color: pink;
+    background-color: white;
+    color: black;
     border: 1px solid pink;
 }
 
 .modal-body {
-    background-color: black;
+    background-color: white;
     border: 1px solid pink;
     color: pink;
     height: 35vh;
@@ -41,11 +41,20 @@
 
 .form .label {
     margin: 2.5%;
+    color: black;
+}
+
+.form #username {
+    width: 50%;
 }
 
 .form .input {
-    background-color: rgb(39, 39, 39);
+    background-color: white;
     width: 50%;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: none;
+    border-right: none;
 }
 
 .form .button {
@@ -53,20 +62,21 @@
     margin: 2.5%;
     background-color: transparent;
     border: 1px solid pink;
-    color: pink;
+    color: black;
     transition: .5s linear;
 }
 
 .form .button:hover{
     background-color: rgb(39, 39, 39);
     border: none;
-    font-weight: 900;
+    color: pink;
 }
 
 .modal-footer {
-    background-color: black;
+    background-color: white;
     border: 1px solid pink;
     width: 100%;
+    font-weight: 900;
 }
 
 .footer-content {
@@ -85,7 +95,7 @@
 
 .modal-footer .button {
     background-color: transparent;
-    color: pink;
+    color: black;
     border-top: none;
     border-left: none;
     border-right: none;
