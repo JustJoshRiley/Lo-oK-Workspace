@@ -5,9 +5,9 @@ Its time to change the way you organize your Links!
 [DEMO HERE](https://drive.google.com/file/d/1Ljz6cZclCRw-4XozHdnxkU0LuefkTqz6/view).
 
 
-![Look Home Page](LookHomepage.png)
-![Look SignUp Modal](LookSignUpModal.png)
 ![Look Landing Page](LookLanding.png)
+![Look SignUp Modal](LookSignUpModal.png)
+![Look Home Page](LookHomepage.png)
 
 # Why?
 The goal of [Lo-oK](http://look-workspace.dev.justjoshriley.com/#/) was to showcase everything I had learned throughout my spring semester at Dominican University of California. With just tewo weeks to complete the project from start to finish, I present you the result of my hard work.
