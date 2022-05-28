@@ -1,5 +1,7 @@
 # ( Lo-oK )
-Its time to change the way you organize your [LINKS](http://look-workspace.dev.justjoshriley.com/#/).
+Its time to change the way you organize your Links!
+
+[LIVE SITE](http://look-workspace.dev.justjoshriley.com/#/).
 [DEMO HERE](https://drive.google.com/file/d/1Ljz6cZclCRw-4XozHdnxkU0LuefkTqz6/view).
 
 
